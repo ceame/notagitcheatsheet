@@ -1,3 +1,5 @@
+All the information comes from [Git Docs](https://git-scm.com/doc) 
+
 # Git vocabulary
 git term|meaning
 :---|:---
