@@ -1,9 +1,9 @@
-All the information comes from [Git Docs](https://git-scm.com/doc) 
+All information comes from [Git Docs](https://git-scm.com/doc) 
 
 # Git vocabulary
 git term|meaning
 :---|:---
-`a checkout`|a working copy of tge Git repository
+`a checkout`|a working copy of the Git repository
 `a tracked/untracked file`|files that were / were not present in the last snapshot. They can be (un)modified or staged 
 `git typical process`|**untracked**-->`git add`-->**staged** <br> **tracked, unmodified** --> edit file --> **tracked, modified** <br> **tracked, modified** --> `git add` --> **git add** --> **staged** <br> **staged** --> `git commit` --> **commited to working copy/checkout** <br> **commited** --> `git push` --> **pushed to origin repository**
 add `.gitignore` file | class of files to be added to this file if you do not want to track/add them <br> **examples** <br> `*.a` = ignore all .a files, so the names can be of zero or more characters <br> `!lib.a` = do track the `lib.a` files <br> `/TODO` = ignore the TODO file in the current working dir, but not in subdirs <br> `build/` = ignore all files in the `build` directory <br> `doc/*.txt` = ignore all `txt` files in the `doc` directory but not the other files <br> `doc/**/*.pdf` = ignore all `pdf` files in the `doc` directory and its subdirectories <br> For more best practices about `.gitignore` scripting, see [here](https://github.com/github/gitignore)
@@ -135,3 +135,9 @@ git command| what does it do
 `git config --global alias.example existing_command`| gives an alias `example` to an existing command `existing command`
 `git config --global alias.unstage 'reset HEAD --'`| example of the previous
 `git config --global alias.last 'log -1 HEAD'`| example of the previous
+
+# Scenario's
+## Collaboration
+git flow | Situation | Other | Resource
+---|---|---|---
+`git pull origin master`--> `git checkout <receiving branch>` --> `git merge <merging branch>`(typically master) | When you are working on your local branch and you recently pushed your branch to the remote to be integrated in the origin/master. When you want to pull the most recent origin/master to be able to include those changes in you local branch. | none | https://www.atlassian.com/git/tutorials/using-branches/git-merge
